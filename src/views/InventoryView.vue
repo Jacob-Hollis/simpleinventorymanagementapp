@@ -1,65 +1,58 @@
 <template>
-    <h3> Inventory:</h3>
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Title</th>
-            <th scope="col">Description</th>
-            <th scope="col">Cost</th>
-            <th scope="col">Stock</th>
-            <th scope="col">Brand</th>
-            <th scope="col">Category</th>
-            <th scope="col">Image</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="product in products" v-bind:key="product.id"> 
-            <th scope="row">{{product.id}}</th>
-            <td>{{product.title}}</td>
-            <td>{{product.description}}</td>
-            <td>{{product.price}}</td>
-            <td>{{product.stock}}</td>
-            <td>{{product.brand}}</td>
-            <td>{{product.category}}</td>
-            <td>{{product.thumbnail}}</td>
-          </tr>
-        </tbody>
-      </table>
-      <v-data-table-server
+  <h2>Inventory</h2>
+  <v-div class="inventory-table">
+    <v-data-table
       v-model:items-per-page="itemsPerPage"
       :headers="headers"
-      :items-length="totalItems"
-      :items="serverItems"
-      :loading="loading"
-      class="elevation-1"
-      item-value="name"
-      @update:options="loadItems"
-    ></v-data-table-server>
-  </template>
+      :items="products"
+    >
+    </v-data-table>
+  </v-div>
+</template>
     
-  <script>
-    import axios from 'axios';
+<script>
+  import axios from 'axios';
   
-    export default {
-      name: 'InventoryView',
-      data() {
-        return {
-          products: null,
-        };
-      },
-      created: function() {
-        axios
-          .get('https://dummyjson.com/products')
-          .then(res => {
-            this.products = res.data.products;
-          })
+  export default {
+    name: 'InventoryView',
+    data() {
+      return {
+        itemsPerPage: 10,
+        headers: [
+          {
+            title: 'Product Id',
+            align: 'start',
+            sortable: false,
+            key: 'id',
+          },
+          { title: 'Title', align: 'end', key: 'title' },
+          { title: 'Description', align: 'end', key: 'description' },
+          { title: 'Price', align: 'end', key: 'price' },
+          { title: 'Units', align: 'end', key: 'stock' },
+          { title: 'Brand', align: 'end', key: 'brand' },
+          { title: 'Category', align: 'end', key: 'category' },
+          { title: 'Product Image', align: 'end', key: 'thumbnail' },
+        ],
+        products: [],
+      };
+    },
+    created: function() {
+      axios
+        .get('https://dummyjson.com/products')
+        .then(res => {
+          this.products = res.data.products;
+        })
       }
     }
-  </script>
+</script>
     
-  <style>
-    h3 {
-      margin-bottom: 5%;
-    }
-  </style>
+<style>
+  h2 {
+    padding-left: 1%;
+    margin-bottom: 5px;
+  }
+  .inventory-table {
+    padding-left:1%;
+    padding-right:1%;
+  }
+</style>

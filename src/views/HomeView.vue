@@ -1,5 +1,13 @@
 <template>
   <v-container>
+    <v-col cols="12">
+        <v-img
+          :src="require('../assets/logo.svg')"
+          class="my-3"
+          contain
+          height="200"
+        />
+    </v-col>
     <v-row class="text-center">
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
@@ -11,21 +19,9 @@
         class="mb-5"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-5">
-          What's next?
-        </h2>
-
-        <v-row justify="center">
-          <p>Use the menu below to access inventory, view inventory metrics, and read more about the app.</p>
-        </v-row>
-      </v-col>
-      <v-col cols="12">
-        <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
+        <h3 class="headline font-weight-bold mb-5">
+          Use the menu below to access inventory, view inventory metrics, and read more about the app.
+        </h3>
       </v-col>
     </v-row>
   </v-container>
