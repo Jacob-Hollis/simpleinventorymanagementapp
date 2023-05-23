@@ -17,14 +17,14 @@
             <v-icon>mdi-package-variant</v-icon>
             Inventory
         </v-btn>
-        <!--<v-btn value="metrics" to="/metrics">
+        <v-btn value="metrics" to="/metrics">
             <v-icon>mdi-chart-line</v-icon>
             Metrics
         </v-btn>
         <v-btn value="about" to="/about">
             <v-icon>mdi-help</v-icon>
             About
-        </v-btn>-->
+        </v-btn>
     </v-bottom-navigation>
 </template>
 
