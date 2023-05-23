@@ -4,17 +4,25 @@
         <thead>
           <tr>
             <th scope="col">Id</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">City</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Category</th>
+            <th scope="col">Image</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="user in users" v-bind:key="user.id"> 
-            <th scope="row">{{user.id}}</th>
-            <td>{{user.name}}</td>
-            <td>{{user.email}}</td>
-            <td>{{user.address.city}}</td>
+          <tr v-for="product in products" v-bind:key="product.id"> 
+            <th scope="row">{{product.id}}</th>
+            <td>{{product.title}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.stock}}</td>
+            <td>{{product.brand}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.thumbnail}}</td>
           </tr>
         </tbody>
       </table> 
@@ -27,14 +35,14 @@
       name: 'InventoryView',
       data() {
         return {
-          users: null,
+          products: null,
         };
       },
       created: function() {
         axios
-          .get('https://jsonplaceholder.typicode.com/users')
+          .get('https://dummyjson.com/products')
           .then(res => {
-            this.users = res.data;
+            this.products = res.data.products;
           })
       }
     }
