@@ -15,7 +15,7 @@
           What's next?
         </h2>
 
-        <v-row justify="center" align="center">
+        <v-row justify="center">
           <p>Use the menu below to access inventory, view inventory metrics, and read more about the app.</p>
         </v-row>
       </v-col>

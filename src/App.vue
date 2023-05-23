@@ -1,21 +1,18 @@
 <template>
   <v-app>
     <NavigationView/>
-    <v-main>
-      <HomeView/>
-    </v-main>
+    
+    <router-view></router-view>
   </v-app>
 </template>
 
 <script>
-import HomeView from './views/HomeView.vue'
 import NavigationView from './components/NavigationView.vue'
 
 export default {
   name: 'App',
 
   components: {
-    HomeView: HomeView,
     NavigationView: NavigationView
   },
 
