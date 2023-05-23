@@ -6,24 +6,23 @@
     </v-div>
     <v-bottom-navigation
       v-model="value"
-      active
-      grow
+      mode="shift"
     >
         <v-btn value="home" to="/">
             <v-icon>mdi-home-circle-outline</v-icon>
-            Home
+            <span>Home</span>
         </v-btn>
         <v-btn value="inventory" to="/inventory">
             <v-icon>mdi-package-variant</v-icon>
-            Inventory
+            <span>Inventory</span>
         </v-btn>
         <v-btn value="metrics" to="/metrics">
             <v-icon>mdi-chart-line</v-icon>
-            Metrics
+            <span>Metrics</span>
         </v-btn>
         <v-btn value="about" to="/about">
             <v-icon>mdi-help</v-icon>
-            About
+            <span>About</span>
         </v-btn>
     </v-bottom-navigation>
 </template>

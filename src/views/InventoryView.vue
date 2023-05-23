@@ -25,7 +25,17 @@
             <td>{{product.thumbnail}}</td>
           </tr>
         </tbody>
-      </table> 
+      </table>
+      <v-data-table-server
+      v-model:items-per-page="itemsPerPage"
+      :headers="headers"
+      :items-length="totalItems"
+      :items="serverItems"
+      :loading="loading"
+      class="elevation-1"
+      item-value="name"
+      @update:options="loadItems"
+    ></v-data-table-server>
   </template>
     
   <script>
