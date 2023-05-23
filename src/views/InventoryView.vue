@@ -6,6 +6,11 @@
       :headers="headers"
       :items="products"
     >
+    <template v-slot:[`item.stock`]="{ item }">
+      <v-chip :color="getColor(item.columns.stock)">
+        {{ item.columns.stock }}
+      </v-chip>
+    </template>
     </v-data-table>
   </v-div>
 </template>
@@ -20,7 +25,7 @@
         itemsPerPage: 10,
         headers: [
           {
-            title: 'Product Id',
+            title: 'Id',
             align: 'start',
             sortable: false,
             key: 'id',
@@ -42,7 +47,14 @@
         .then(res => {
           this.products = res.data.products;
         })
-      }
+    },
+    methods: {
+      getColor (stock) {
+        if (stock < 20) return 'red'
+        else if (stock < 50) return 'orange'
+        else return 'green'
+      },
+    },
     }
 </script>
     
