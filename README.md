@@ -1,4 +1,10 @@
-# simpleinventorymanagementapp
+# Simple Inventory Management App
+
+Built with: 
+[![](https://skillicons.dev/icons?i=vue)](https://skillicons.dev)
+[![](https://skillicons.dev/icons?i=javascript)](https://skillicons.dev)
+
+## Overview
 
 ## Project setup
 ```
@@ -19,6 +25,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
