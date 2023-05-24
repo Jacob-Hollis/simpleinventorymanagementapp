@@ -26,7 +26,7 @@ npm run serve
 npm run build
 ```
 
-## Fixe files
+## Fix files
 ```
 npm run lint
 ```
