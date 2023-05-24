@@ -11,19 +11,22 @@ This is a simple web app that simulates an inventory management system. I built 
 ## Project setup
 ```
 npm install
+npm install vue-router@4
+npm install vueify --save-dev
+npm install --save axios vue-axios
 ```
 
-### Compiles and hot-reloads for development
+## Run dev environment
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+## Compile for production
 ```
 npm run build
 ```
 
-### Lints and fixes files
+## Fixe files
 ```
 npm run lint
 ```
