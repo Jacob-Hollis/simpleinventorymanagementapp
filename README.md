@@ -1,6 +1,6 @@
 # Simple Inventory Management App
 
-Built with: 
+Built with:    
 [![](https://skillicons.dev/icons?i=vue)](https://skillicons.dev)
 [![](https://skillicons.dev/icons?i=javascript)](https://skillicons.dev)
 
