@@ -6,6 +6,8 @@ Built with:
 
 ## Overview
 
+This is a simple web app that simulates an inventory management system. I built it as a refresher on Vue, and to experiment with the new Vueify data tables found in their Labs experimental playground.
+
 ## Project setup
 ```
 npm install
